@@ -1,0 +1,14 @@
+// Write a program to read three integers from a file.
+
+//CODE
+
+#include <stdio.h>
+
+int main() {
+    int a,b,c;
+	File *ptr;
+	ptr = fopen('pr_c.txt','r');
+	fscanf(ptr, "%d %d %d",&a,&b,&c);
+	printf("\n values of a,b,c is %d %d %d:\n",a,b,c)
+	return 0;
+}
