@@ -1,0 +1,42 @@
+# WAP TO REVERSE A ARAY
+
+// Instead of running a reverse loop for printing a reverse array..
+// if we have to save the reverse form of that array then reverse loop does not work.
+//     And then you will take extra array to store the new reverse array, which is waste of memory and not allowed then,
+// In such situation you can use below logic!
+
+// It;s complexity is less and effcient program.
+// URL:  https://ide.geeksforgeeks.org/67j2WXufoO
+
+//CODE:
+#include <stdio.h>
+
+int main() {
+    int n;
+    int arr[100];
+    scanf("%d",&n);
+    for(int i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0; i<n/2; i++) {
+        int temp = arr[n-1-i];
+        arr[n-1-i] = arr[i];
+        arr[i] = temp;
+    }
+    
+    for(int i=0; i<n; i++) {
+        printf("%d ",arr[i]);
+    }
+}
+
+
+//SAMPLE INPUT:
+5
+1
+2
+3
+4
+5
+
+// SAMPLE OUTPUT
+5 4 3 2 1 
