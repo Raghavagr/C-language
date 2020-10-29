@@ -1,0 +1,47 @@
+// URL: https://ide.geeksforgeeks.org/hfoDeStcIj
+
+//CODE:
+
+#include <iostream>
+using namespace std;
+
+class complex;
+
+class calculator {
+    public:
+      int sumRealComplex(complex, complex);
+};
+
+class complex {
+  int a,b;
+  friend int calculator :: sumRealComplex(complex, complex);
+  
+  public:
+    void setNumber(int n1, int n2) {
+        a = n1;
+        b = n2;
+    }
+    
+    void printNumber() {
+      cout<<"\nyour number is\na: "<<a<<"\nb "<<b;
+    }
+    
+};
+
+int calculator :: sumRealComplex(complex o1, complex o2) {
+    int real = o1.a + o2.a;
+    int img = o1.b + o2.b;
+    cout<<"sum of real_part: "<<real;
+    cout<<"\nsum of img_part: "<<img;
+}
+
+int main() {
+	complex o1,o2;
+	o1.setNumber(1,4);
+	o2.setNumber(4,2);
+	calculator calc;
+	calc.sumRealComplex(o1,o2);
+	//int res = calc.sumRealComplex(o1,o2);
+	//cout<<"\nsum of real part of o1 and o2 is:"<<res<<endl;
+	return 0;
+}
