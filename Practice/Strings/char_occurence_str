@@ -1,0 +1,29 @@
+// QUE) Write a program to count the occurrence of a given character in a string.
+
+//URL: https://ide.geeksforgeeks.org/Snc2qRRqT1
+//code
+#include <stdio.h>
+
+int count_occur(char *st, char se) {
+    int i=0,count=0;
+    while(st[i] != '\0') {
+        if(st[i] == se) {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+
+int main() {
+	char st[] = "RAGHAV";
+	char c = 'A';
+	int res = count_occur(st, c);
+	printf("the no. of occ of char %c in %s is: %d",c,st,res);
+	return 0;
+}
+
+
+// 2ND SOUTION: Please check:
+
+//URL:  https://ide.geeksforgeeks.org/M3IhRkPR8f
