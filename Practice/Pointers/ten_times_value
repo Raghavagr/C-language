@@ -1,0 +1,18 @@
+// QUE) Write a program to change the value of a variable to ten times its current value. Write a function and pass the value by reference.
+
+//code
+#include <stdio.h>
+
+void tenTimes(int *p) {
+    //p = p*10;
+    int t = *p;
+    printf("%d",t*10);
+}
+
+int main() {
+	int a=2;
+	//int *ptr;
+	//ptr = &a;
+	tenTimes(&a);
+	return 0;
+}
