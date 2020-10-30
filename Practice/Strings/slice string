@@ -1,0 +1,25 @@
+//QUE) Write a function slice() to slice a string. It should change the original string such that it is now the sliced strings.
+ //   Take m and n as the start and ending position for slice.
+
+//URL:  https://ide.geeksforgeeks.org/jVEevOJp64
+//code
+#include <stdio.h>
+
+void slice(char *st, int m, int n) {
+    int i=0;
+    // if we do i<n then it will also print nth char which is not rule of array indexing 
+    // eg: we pass 1-4 then it should print char at index 1,2,3 not at 4.
+    while((m+i)<n) {         
+        st[i] = st[i+m];
+        i++;
+    }
+    st[i] = '\0';  // if we do not do this then entire str will print.
+}
+
+int main() {
+	//int m,n;
+	char st[] = "RAGHAV";
+	slice(st,1,4);
+	printf("%s",st);
+	return 0;
+}
