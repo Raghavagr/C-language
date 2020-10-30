@@ -1,0 +1,22 @@
+// QUE) Write a program using a function that calculates the sum and average of two numbers. 
+//      Use pointers and print the values of sum and average in main().
+
+//URL: https://ide.geeksforgeeks.org/0AdJnYpUa8
+//code
+#include <stdio.h>
+
+void sum_avg(int a, int b, int *sum, float *avg) {
+    *sum = a+b;
+    *avg = (float)*sum/2;
+}
+
+int main() {
+    int i,j,sum;
+    float avg;
+	i = 3;
+	j = 4;
+	sum_avg(i,j,&sum,&avg);
+	printf("Sum is %d",sum);
+	printf("\navg is %.2f",avg);
+	return 0;
+}
