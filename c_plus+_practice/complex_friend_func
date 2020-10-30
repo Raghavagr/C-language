@@ -1,0 +1,59 @@
+// Example of one complex friend func
+
+//URL: https://ide.geeksforgeeks.org/g7k1MDd8ai
+
+//friend function can be written anywhere public or private
+#include <iostream>
+using namespace std;
+
+//forward declaration of class2
+class c2;
+
+class c1 {
+  int num1;
+  friend void exchange(c1 &, c2 &);
+  
+  public:
+    void getData(int val) {
+        num1 = val;
+    }
+    
+    void disp() {
+        cout<<"\nNum1: "<<num1;
+    }
+};
+
+class c2 {
+  int num2;
+  friend void exchange(c1 &, c2 &);
+  
+  public:
+    void getData(int val) {
+        num2 = val;
+    }
+    
+    void disp() {
+        cout<<"\nNum2: "<<num2;
+    }
+};
+
+void exchange(c1 &o1, c2 &o2) {
+    int temp = o1.num1;
+    o1.num1 = o2.num2;
+    o2.num2 = temp;
+}
+
+int main() {
+    c1 o1;
+    c2 o2;
+	o1.getData(3);
+	o2.getData(5);
+	cout<<"before exchange the val";
+	o1.disp();
+	o2.disp();
+	cout<<"\nAfter exchange the val";
+	exchange(o1,o2);
+	o1.disp();
+	o2.disp();
+	return 0;
+}
