@@ -1,0 +1,24 @@
+// QUE) Write your own version of strlen function from <string.h>
+
+//URL: https://ide.geeksforgeeks.org/iy1FT1864l
+
+//code
+#include <stdio.h>
+
+int str_len(char *st) {
+    char *ptr = st;
+    int len=0;
+    while(*ptr != '\0') {
+        len++;
+        ptr++;
+    }
+    return len;
+}
+
+int main() {
+	
+	char st[] = "RAGHAV";
+	int res = str_len(st);
+	printf("len of string is: %d",res);
+	return 0;
+}
