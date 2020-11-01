@@ -1,0 +1,40 @@
+// Bitwise operator que of HackerRank C
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//Complete the following function.
+
+//code
+void calculate_the_maximum(int n, int k) {
+  //Write your code here.
+  int Maxand,Maxor,Maxxor;
+  Maxand=0; Maxor=0; Maxxor=0;
+  
+  for(int i=1;i<n;i++) {
+      for(int j=i+1;j<=n;j++) {
+          if(((i&j) < k) && ((i&j) > Maxand)) {
+              Maxand = (i&j);
+          }
+          if(((i|j) < k) && ((i|j) > Maxor)) {
+              Maxor = (i|j);
+          }
+          if((((i^j) < k)) && ((i^j) > Maxxor)) {
+              Maxxor = (i^j);
+          }
+      }
+  }
+  printf("%d",Maxand);
+  printf("\n%d",Maxor);
+  printf("\n%d",Maxxor);
+}
+
+int main() {
+    int n, k;
+  
+    scanf("%d %d", &n, &k);
+    calculate_the_maximum(n, k);
+ 
+    return 0;
+}
