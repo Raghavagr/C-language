@@ -1,0 +1,70 @@
+// How the constructor is invoked in different cases when constructor is there in derieved class
+// URL: https://ide.geeksforgeeks.org/UlXN8uXyNX
+
+/*
+Case1:
+class B: public A{
+   // Order of execution of constructor -> first A() then B()
+};
+
+Case2:
+class A: public B, public C{
+    // Order of execution of constructor -> B() then C() and A()
+};
+
+Case3:
+class A: public B, virtual public C{
+    // Order of execution of constructor -> C() then B() and A()
+};
+
+
+//CODE
+#include <iostream>
+using namespace std;
+
+class Base1 {
+    int num1;
+    public:
+        Base1(int n1) {
+            num1 = n1;
+            cout<<"\nBase1 class constructor called";
+        }
+        void printData1(void) {
+            cout<<"\nthe base1 var is "<<num1;
+        }
+};
+
+class Base2 {
+    int num2;
+    public:
+        Base2(int n2) {
+            num2 = n2;
+            cout<<"\nBase2 class constructor called"<<endl;
+        }
+        void printData2(void) {
+            cout<<"\nthe base2 var is "<<num2<<endl;
+        }
+};
+
+class Derived: public Base1, public Base2 {
+    int der1, der2;
+    public:
+        Derived(int a, int b, int c, int d): Base1(a), Base2(b) {
+            der1 = c;
+            der2 = d;
+            cout<<"\nDerived class constructor called"<<endl;
+        }
+        
+        void printDerived(void) {
+            cout<<"\nval of der1 "<<der1<<endl;
+            cout<<"val of der2 "<<der2<<endl;
+        }
+};
+
+int main() {
+	Derived obj(1,2,3,4);
+	obj.printData1();
+	obj.printData2();
+	obj.printDerived();
+	return 0;
+}
