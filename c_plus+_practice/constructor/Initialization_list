@@ -1,0 +1,47 @@
+// INITIALIZATION LIST IN CONSTRUCTOR  -> This is used when constructor body is complex.
+/*
+Syntax for initialization list in constructor:
+constructor (argument-list) : initilization-section
+{
+    assignment + other code;
+}
+
+class Test{
+    int a;
+    int b;
+    public:
+        Test(int i, int j) : a(i), b(j){constructor-body}
+};
+
+*/
+
+// EXAMPLE:
+// URL:  
+
+//code
+#include <iostream>
+using namespace std;
+
+class Demo {
+    int a;
+    int b;
+    
+    public:
+        //Demo(int i, int j) : a(i), b(j)        //run
+        //Demo(int i, int j) : a(i), b(i + j)    //run
+        //Demo(int i, int j) : a(i), b(2 * j)    //run
+        //Demo(int i, int j) : a(i), b(a + j)    //run
+        //Demo(int i, int j) : b(j), a(i + b)      // Garbage value-> because a is initiazed first.(if b is written up then run successfully)
+        Demo(int i, int j) : a(i)
+        {
+            //b = j;
+            cout<<"constructor executed"<<endl;
+            cout<<"a: "<<a<<endl;
+            cout<<"b: "<<b<<endl;
+        }
+};
+
+int main() {
+	Demo d(2,3);
+	return 0;
+}
