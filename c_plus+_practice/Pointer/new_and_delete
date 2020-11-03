@@ -1,0 +1,28 @@
+// NEW AND DELETE KEYWORD IN C++
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Basic Example
+	int a=5;
+	int *ptr;
+	ptr = &a;
+	*ptr = 999;
+	cout<<"the value of a is "<<*(ptr)<<endl;
+	
+	//new operator
+	float *p = new float(34.77);
+	cout<<"the value at address p is "<<*(p)<<endl;
+	
+	int *arr = new int[3];
+	arr[0] = 7;
+	*(arr+1) = 20;
+	arr[2] = 37;
+	// DELETE KEYWORD
+	delete[] arr;            // [] is necessary to free the memory
+	cout<<"value at arr[0] "<<arr[0]<<endl;
+	cout<<"value at arr[0] "<<arr[1]<<endl;
+	cout<<"value at arr[0] "<<arr[2]<<endl;
+	return 0;
+}
