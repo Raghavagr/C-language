@@ -1,0 +1,43 @@
+// array_of_objects using POINTER
+
+//URL: https://ide.geeksforgeeks.org/LfvsNd2x7J
+//CODE
+#include <iostream>
+using namespace std;
+
+class ShopItem
+{
+    int id;
+    float price;
+    public:
+        void setData(int a, float b){
+            id = a;
+            price = b;
+        }
+        void getData(void){
+            cout<<"Code of this item is "<< id<<endl;
+            cout<<"Price of this item is "<<price<<endl;
+        }
+};
+
+int main() {
+	int size=3;
+	int id,i;
+	float price;
+	ShopItem *ptr = new ShopItem[size];
+	ShopItem *ptrTemp = ptr;  // temp* because we will increate the index of ptr then to print the details back we need ptr.
+	
+	for(i=0;i<size;i++) {
+	    cout<<"enter id and price of shop"<<endl;
+	    cin>>id>>price;
+	    ptr->setData(id,price);
+	    ptr++;
+	}
+	// getData
+	for(i=0;i<size;i++) {
+	    ptrTemp->getData();
+	    ptrTemp++;
+	}
+	
+	return 0;
+}
