@@ -1,0 +1,40 @@
+//Pointer_to_objects
+
+#include <iostream>
+using namespace std;
+
+class complex {
+  int real,img;
+  public:
+    void setData(int a, int b) {
+        real = a;
+        img = b;
+    }
+    void getData(void) {
+        cout<<"real: "<<real<<endl;
+        cout<<"img: "<<img<<endl;
+    }
+};
+
+int main() {
+	complex c1;
+	complex *ptr = &c1;
+	
+	(*ptr).setData(3,4);
+	//(*ptr).getData(); // is as good as below one(any can be used)
+	ptr->getData();   // arrow operator
+	
+	// this can also be done
+	complex *ptr1 = new complex;
+	//(*ptr1).setData(2,3);
+	//(*ptr1).getData();
+	// is as good as
+	ptr1->setData(2,3);
+	ptr1->getData();
+	
+	//ARRAY OF OBJECTS
+	complex *ptr2 = new complex[4];
+	ptr2->setData(4,7);
+	ptr2->getData();
+	return 0;
+}
