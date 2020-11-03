@@ -1,0 +1,51 @@
+// POINTER TO DERIEVED CLASS
+//URL: https://ide.geeksforgeeks.org/xLLCECZHYB
+
+//CODE
+#include <iostream>
+using namespace std;
+
+class BaseClass {
+    public:
+        int var_base;
+        void display() {
+            cout<<"base class var: "<<var_base<<endl;
+        }
+        
+};
+
+class DerivedClass : public BaseClass {
+    public:
+        int var_der;
+        void display() {
+            cout<<"displaying base Class var from der: "<<var_base<<endl;
+            cout<<"Derived Class var: "<<var_der<<endl;
+        }
+        
+};
+
+int main() {
+	BaseClass *baseptr;
+	BaseClass obj_base;
+	DerivedClass obj_der; // DerivedClass obj 
+	
+	baseptr = &obj_der;  // BaseClass ptr var pointing to der class obj 
+	baseptr->var_base = 27;
+	baseptr->display();  //it will call to BaseClass display func
+	
+	//baseptr->var_der = 38;  // will throw an eror 
+	baseptr->var_base = 381;
+	baseptr->display();
+	
+	//if pointer for derived class
+	DerivedClass *derptr;
+	derptr = &obj_der;
+	derptr ->var_der = 400;
+	derptr->display();       // if base class var value not given then it take inheritance value.
+	
+	derptr->var_base = 77;
+	derptr->var_der = 79;
+	derptr->display();
+	
+	return 0;
+}
