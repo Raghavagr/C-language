@@ -1,0 +1,80 @@
+*****************Pure Virtual Functions in C++*********************
+- Pure virtual function is a function that doesn’t perform any operation and the function is declared by assigning the value 0 to it.
+- Pure virtual functions are declared in abstract classes.
+
+*******************Abstract Base Class in C++********************
+- Abstract base class is a class that has at least one pure virtual function in its body. 
+- The classes which are inheriting the base class must need to override the virtual function of the abstract class otherwise compiler will throw an error.
+
+//URL: https://ide.geeksforgeeks.org/3mZ04nmwmZ
+
+//CODE
+#include <iostream>
+using namespace std;
+
+class Youtube {
+    protected:
+        string title;
+        float rating;
+    public:
+        Youtube(string t, float rat) {
+            title = t;
+            rating = rat;
+        }
+        virtual void display() = 0;
+};
+
+class YoutubeVideo : public Youtube {
+    protected:
+        float videoLen;
+    public:
+        YoutubeVideo(string t, float rat, float vl) : Youtube(t,rat) {
+            videoLen = vl;
+        }
+        
+        void display() {
+            cout<<"amazing video with title: "<<title<<endl;
+            cout<<"it has rating "<<rating<<endl;
+            cout<<"length of video "<<videoLen<<endl;
+        }
+};
+
+class YoutubeText : public Youtube {
+    protected:
+        int words;
+    public:
+        YoutubeText(string t, float rat, int word) : Youtube(t,rat) {
+            words = word;
+        }
+        
+        void display() {
+        cout<<"amazing video with title: "<<title<<endl;
+        cout<<"it has rating "<<rating<<endl;
+        cout<<"total masri words "<<words<<endl;
+    }
+        
+};
+
+int main() {
+	string title;
+	float rating, vlen;
+	int words;
+	
+	title= "flaskTutorial";
+	rating = 4.5;
+	vlen = 22.40;
+	YoutubeVideo flaskvideo(title, rating, vlen);
+	
+	title= "flask Begineers Tutorial";
+	rating = 4.57;
+	words = 327;
+	YoutubeText flaskText(title, rating, words);
+	
+	Youtube *tuts[2];
+	tuts[0] = &flaskvideo;
+	tuts[1] = &flaskText;
+	
+	tuts[0]->display();
+	tuts[1]->display();
+	return 0;
+}
