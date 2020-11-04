@@ -1,0 +1,33 @@
+// SIMPLE EXAMPLE OF VIRTUAL FUNC
+
+#include <iostream>
+using namespace std;
+
+class Base {
+  public:
+    int basevar;
+    void display() {
+        cout<<"base class var: "<<basevar<<endl;
+    }
+};
+
+class derived : public Base {
+  public:
+    int dervar;
+    void display() {
+        cout<<"base class var: "<<dervar<<endl;
+    }
+};
+
+
+int main() {
+	Base *ptrbase;
+	Base objbase;
+	derived objder;
+	
+	ptrbase = &objder;
+	//ptrbase->dervar = 20; // error
+	ptrbase->basevar = 20;
+	ptrbase->display();
+	return 0;
+}
