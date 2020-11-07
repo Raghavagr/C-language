@@ -1,0 +1,43 @@
+// TEMPLATE WITH MULTIPLE PARAMETERS
+/*
+    CLASS TEMPLATE WITH MULTIPLE PARAMETERS
+    SYNTAX:
+        template<class T1, class T2....(comma separated)>
+        class name_of_class {
+          //code
+        }
+*/
+
+//code
+#include<iostream>
+using namespace std;
+
+template <class T1, class T2>
+class myClass {
+    public:
+        T1 data1;
+        T2 data2;
+        myClass(T1 a, T2 b){
+            data1 = a;
+            data2 = b
+          }
+          
+        void display() {
+          cout<<"data1"<<data1<<endl<<"data2:"<<data2<<endl;
+        }
+        
+ };
+ 
+ int main() {
+    myClass <int, char> obj(7,'R');
+    obj.display();
+    return 0;
+}
+
+//OUTPUT
+data1: 7
+data2: R
+
+// This is how we do it, we can use any combination any dataType int,float or chat, double anything 
+// as welll there can be not only 2, as many parameters you want according to dtype you want to used.
+// THIS IS HOW TEMPLATE PROVIDE US A LUXURY
