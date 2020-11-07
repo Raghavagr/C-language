@@ -1,0 +1,106 @@
+// Templates: Templates in c++ are like the classes where we do not need to create a separate class for each each data type. 
+we can directly make the use of Templates.
+// where we need to specify or make multiple classes there we use templace make that which data type we are using..
+
+// Simple example without template of dot product of vector
+
+//code
+#include<iostream>
+using namespace std;
+
+class vector {
+    int *arr;
+    int size;
+    public:
+        vector(int m) {
+            size = m;
+            arr = new int[size];
+          }
+          
+          int dotProduct(vector &v) {
+              int d =0;
+              for(int i=0;i<size;i++) {
+                  d += this->arr[i] * v.arr[i];
+                }
+                return d;
+              }
+};
+
+int main() {
+    vector v1(3);
+    v1.arr[0] = 2;
+    v1.arr[1] = 3;
+    v1.arr[2] = 4;
+    
+    vector v2(3);
+    v2.arr[0] = 2;
+    v2.arr[1] = 3;
+    v2.arr[2] = 4;
+    
+    int a = v1.dotProduct(v2);
+    cout<<a<<endl;
+    return 0;
+}
+
+// Now, If i want to use dot product of float vectors then what i will do. wil i make a nother class same as it is.  
+// NO!.. I WILL MAKE THE USE OF TEMPLATE...
+// EXAMPLE USING TEMPLATE    -> wherever we have used a custom dataType, there use the template class object.
+
+//code
+#include<iostream>
+using namespace std;
+
+template<class T>
+class vector {
+    T *arr;
+    int size;
+    public:
+        vector(int m) {
+            size = m;
+            arr = new T[size];
+          }
+          
+          T dotProduct(vector &v) {
+              T d =0;
+              for(int i=0; i<size; i++) {
+                  d += this->arr[i] * v.arr[i];
+                }
+                return d;
+              }
+};
+
+int main() {
+    vector <float>v1(3);
+    v1.arr[0] = 2.1;
+    v1.arr[1] = 3.2;
+    v1.arr[2] = 4.1;
+    
+    vector <float>v2(3);
+    v2.arr[0] = 2.4;
+    v2.arr[1] = 3.5;
+    v2.arr[2] = 4.1;
+    
+    float a = v1.dotProduct(v2);   // 2.1*2.4 + 3.2*3.5 + 4.1*4.1 = 33.05
+    cout<<a<<endl;
+    return 0;
+}
+
+// if you want double we can simply do this
+/*
+int main() {
+    vector <double>v1(3);
+    v1.arr[0] = 2.1;
+    v1.arr[1] = 3.2;
+    v1.arr[2] = 4.1;
+    
+    vector <double>v2(3);
+    v2.arr[0] = 2.4;
+    v2.arr[1] = 3.5;
+    v2.arr[2] = 4.1;
+    
+    double a = v1.dotProduct(v2);   // 2.1*2.4 + 3.2*3.5 + 4.1*4.1 = 33.05
+    cout<<a<<endl;
+    return 0;
+}
+*/
+// If you want INT you can make it.
