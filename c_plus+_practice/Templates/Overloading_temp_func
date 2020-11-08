@@ -1,0 +1,50 @@
+// Member Function Templates & Overloading Template Functions in C++
+
+// URL: https://ide.geeksforgeeks.org/D1FtLxlJhM
+
+//CODE
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Demo {
+    public:
+        T data;
+        Demo(T x) {
+            data = x;
+        }
+        
+        void display();
+        
+        /*
+        void display() {
+            cout<<"data: "<<data<<endl;
+        }
+        */
+};
+
+template <class T>
+void Demo <T> :: display() {
+    cout<<"data: "<<data<<endl;
+}
+
+// overloading Template function
+void func(int a) {
+    cout<<"I am a normal function():"<<a<<endl;
+}
+
+template <class T>
+void func(T a) {
+    cout<<"I am a Template func: "<<a<<endl;
+}
+
+int main() {
+	Demo <float> d(2.2);
+	cout<<d.data<<endl;
+	d.display();
+	
+	// call func 
+	func(4);  // Exact match takes the highest priority
+	
+	return 0;
+}
