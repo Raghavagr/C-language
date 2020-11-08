@@ -1,0 +1,40 @@
+// DEFAULT PARAMETER IN TEMPLATE
+
+//URL: https://ide.geeksforgeeks.org/amfYRaucGY
+
+//code
+#include <iostream>
+using namespace std;
+
+template <class T1=int, class T2=float, class T3=char>  // default
+class Demo {
+    public:
+        T1 a;
+        T2 b;
+        T3 c;
+        Demo(T1 x, T2 y, T3 z) {
+            a = x;
+            b = y;
+            c = z;
+        }
+        
+        void display(){
+            cout<<"a: "<<a<<endl<<"b: "<<b<<endl<<"c: "<<c<<endl;
+        }
+};
+
+int main() {
+	/*
+	Demo <> d(7,2.7);  // as many dtype you can take here
+	d.display(); */
+	
+	Demo <> d(7,2.7,'R');
+	d.display();
+	
+	//we can also specify here
+	cout<<"\n";
+	Demo <float, char, char> d1(3.4, 'R', 'S');  // specify
+	d1.display();
+	
+	return 0;
+}
