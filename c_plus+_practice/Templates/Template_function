@@ -1,0 +1,59 @@
+/ TEMPLATE FUNCTION
+
+// EXAMPLE TO FIND THE AVG OF 2 NO.
+
+// URL: https://ide.geeksforgeeks.org/hlpCD8q8ik
+
+#include <iostream>
+using namespace std;
+
+/*
+float funcAverage1(int a, int b) {
+    float avg = (a+b)/2;
+    return avg;
+}
+
+float funcAverage2(int a, float b) {
+    float avg = (a+b)/2.0;
+    return avg;
+}
+*/
+// Same using Template function
+template <class T1, class T2>
+float funcAverage(T1 a, T2 b) {
+    float avg = (a+b)/2.0;
+    return avg;
+}
+
+
+int main() {
+	//cout<<funcAverage1(2,4)<<endl;
+	//cout<<funcAverage2(5,4)<<endl;
+	float a;
+	a = funcAverage(3,5.2);   // pass any kind of dtype(numeric)
+	cout<<"avg of this no is: "<<a<<endl;
+	
+	return 0;
+}
+
+// EXAMPLE-2   SWAP 2 NUMBERS
+
+#include <iostream>
+using namespace std;
+
+template <class T>
+void Swap(T &a, T &b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x=5,y=7;
+    cout<<"Before swapping"<<endl;
+	cout<<"x: "<<x<<endl<<"y: "<<y<<endl;
+	Swap(x,y);
+	cout<<"After swapping"<<endl;
+	cout<<"x: "<<x<<endl<<"y: "<<y<<endl;
+	return 0;
+}
