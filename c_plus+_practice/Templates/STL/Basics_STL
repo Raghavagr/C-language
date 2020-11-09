@@ -1,0 +1,41 @@
+                                      ************* STANDARD TEMPLATE LIBRARY **********************
+
+-- The Standard Template Library (STL) is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. 
+-- It is a library of container classes, algorithms, and iterators. 
+-- It is a generalized library and so, its components are parameterized.
+
+STL has four components:-
+1) Containers:- Object which store the data
+2) Algorithms:- Procedure to process the data
+3) Iterators:- Object which point to an element of an container
+4) Functions:- Functors allow the working of the associated function to be customized with the help of parameters to be passed
+
+
+1) CONTAINERS
+There are 3 types of Containers -
+ A) Sequence Containers:- It impliment the data structure in Linear Fashion.      EXAMPLE:   1-> 5-> 7-> 10-> 6   LINE THIS WAY
+                            Sequence Container Include: -
+                            i) Vector    -> Inclue Random Acess(RA) fast
+                                            Insertion/ Deletion is slow at random or in between
+                                            Insertion/ Deletion is fast at end
+                            
+                            ii) list      -> RA slow
+                                             Insertion/ Deletion is fast in mid and random
+                                             Insertion/ Deletion is fast at end
+                            iii) deque
+                            iv)  arrays
+                            
+  B) Associative Container:- Implement sorted data structures that can be quickly searched (O(log n) complexity) or Direct Acess
+                              All the operations are Fast EXCEPT Random Acess(RA)
+                              
+                              Associative Container Includes -
+                              i) SET
+                              ii) MULTISET
+                              iii) MAP/ MULTIMAP
+                              
+  C) Derived Containers:- Support Real World Modelling. 
+                          IT INCLUDES-
+                          i) Stack      -> LIFO
+                          ii) Queue     -> FIFO
+                          iii) Priority Queue
+                           
