@@ -1,0 +1,31 @@
+//                        FUNCTION OBJECT IN C++ STL
+
+// URL: https://ide.geeksforgeeks.org/Nfv3jUl71i
+
+// FUNTION OBJECTS(FUNCTOR): Function wrapped in a class so that it is available like an object.
+//          means in simple I want to use a function as a object.
+//code
+#include <iostream>
+#include<functional>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+	int arr[] = {1,36,12,69,15,7};
+	///sort in asc order
+	//sort(arr,arr+5);         // sort func to sort in asc order but only sort starting 5 elements, last will as it is
+	sort(arr,arr+6);            // now ful array will be sorted
+	for(int i=0;i<6;i++) {
+	    cout<<arr[i]<<endl;
+	}
+	
+	// sort also takes an argumen
+	// pass func object to sort to sort in desc order
+	cout<<"\nSort in DESC order"<<endl;
+	sort(arr,arr+6, greater<int>());
+	for(int i=0;i<6;i++) {
+	    cout<<arr[i]<<endl;
+	}
+	return 0;
+}
