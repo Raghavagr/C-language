@@ -1,0 +1,31 @@
+// MAP IN  STL
+
+// MAP IS AN ASSOCIATIVE CONTAINER
+
+// URL: https://ide.geeksforgeeks.org/8cRN8uEEhO
+
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+int main() {
+	map <string, int> marksMap;
+	marksMap["Raghav"] = 97;
+	marksMap["John"] = 59;
+	marksMap["Prayag"] = 71;
+	
+	// we can also insert into map with help of insert cmd
+	marksMap.insert({{"Hack",91},{"pranav", 43}});
+	
+	// Create the iterator which will iterate  through map and display the key and value.
+	map<string, int> :: iterator iter;
+	for(iter=marksMap.begin(); iter != marksMap.end(); iter++) {
+	    cout<<(*iter).first<<" "<<(*iter).second<<endl;
+	}
+	
+	cout<<"the size is: "<<marksMap.size()<<endl;
+	cout<<"the max_size is: "<<marksMap.max_size()<<endl;
+	cout<<"the's empty return value is: "<<marksMap.empty()<<endl;
+	return 0;
+}
