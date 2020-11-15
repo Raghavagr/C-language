@@ -1,0 +1,20 @@
+##  SET
+
+//URL:  https://ide.geeksforgeeks.org/iFGauuGEHz
+
+//CODE
+#include <iostream>
+#include<set>
+
+using namespace std;
+
+int main() {
+	set <string> mySet={"c++","java","python","javascript"};
+	set<string> :: iterator iter=mySet.begin();
+	//cout<<"first element in set: "<<iter<endl;
+	for(iter=mySet.begin(); iter!= mySet.end(); iter++) {
+	    cout<<*iter<<endl;
+	}
+	
+	return 0;
+}
