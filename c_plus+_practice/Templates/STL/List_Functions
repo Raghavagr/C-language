@@ -15,5 +15,11 @@ int main() {
 	for(iter = li.begin(); iter!= li.end(); iter++) {
 	    cout<<*iter;
 	}
+	
+	//  ## To display the size and max_size of list  ##
+	
+	cout<<"\nsize of list: "<<li.size();
+	cout<<"\nMax size of list: "<<li.max_size();
+	
 	return 0;
 }
