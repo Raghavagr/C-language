@@ -1,0 +1,19 @@
+// INSERTION IN LIST AT RANDOM POSITION
+### EMPLACE()  FUNC
+
+//CODE
+#include <iostream>
+#include<list>
+
+using namespace std;
+
+int main() {
+	list <char> li={'p','t','h','o','n'};
+	list<char> :: iterator iter = li.begin();
+	++iter;
+	li.emplace(iter,'y');
+	for(iter = li.begin(); iter!= li.end(); iter++) {
+	    cout<<*iter;
+	}
+	return 0;
+}
