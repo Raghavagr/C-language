@@ -49,3 +49,30 @@ int main() {
 	
 	return 0;
 }
+
+
+// EXPLORING DEQUE FUNCTIONS
+// URL: https://ide.geeksforgeeks.org/1wx97utcR1
+
+//CODE
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+int main() {
+	deque <int> deq = {2,5,9,11,16};
+	deque <int> :: iterator iter = deq.begin();
+	++iter;
+	deq.insert(iter,2,4);
+	for(iter=deq.begin(); iter != deq.end(); iter++) {
+	    cout<<*iter<<" ";
+	}
+	
+	deq.erase(deq.begin()+1, deq.begin()+2);
+	cout<<"\nafter erasing"<<endl;
+	for(iter=deq.begin(); iter != deq.end(); iter++) {
+	    cout<<*iter<<" ";
+	}
+	return 0;
+}
