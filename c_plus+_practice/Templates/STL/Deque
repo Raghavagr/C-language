@@ -1,0 +1,51 @@
+
+
+// URL: https://ide.geeksforgeeks.org/X8vKge913H
+
+//CODE
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+int main() {
+	deque <int> first = {2,3,5,7,10};
+	deque <int> second;
+	deque <int> :: iterator iter = second.begin();
+	
+	second.assign(first.begin(),first.end());
+	for(iter = second.begin(); iter != second.end(); iter++) {
+	    cout<<*iter<<" ";
+	}
+	
+	cout<<"\nsize of deq: "<<first.size()<<endl;
+	
+	// emplace -> C++ Deque emplace() function inserts a new element just before the specified position and the size of the container is increased by one.
+	first.emplace(first.begin(),1);
+	cout<<"\nprinting elements of deque after inserting: "<<endl;
+	for(iter=first.begin(); iter!= first.end(); iter++) {
+	    cout<<*iter<<" ";
+	}
+	
+	// emplace_back() and emplace_front()
+	first.emplace_front(0);
+	first.emplace_back(27);
+	cout<<"\nprint element after emplace"<<endl;
+	for(iter=first.begin(); iter!= first.end(); iter++) {
+	    cout<<*iter<<" ";
+	}
+	/*
+	//insert()
+	deque <string> language = {"C","Java","python"};
+	deque <string> :: iterator itr;
+	++itr;
+	language.insert(itr,"C++");
+	
+	cout<<"\nafter inserting insert func()"<<endl;
+	for(itr=language.begin(); itr!= language.end(); itr++) {
+	    cout<<*itr<<" ";
+	}
+	*/
+	
+	return 0;
+}
