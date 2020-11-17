@@ -29,3 +29,67 @@ int main() {
 	cout<<"the's empty return value is: "<<marksMap.empty()<<endl;
 	return 0;
 }
+
+
+
+// *********************** EXPLORING MAP TO NEXT LEVEL ******************************
+
+// URL: https://ide.geeksforgeeks.org/R30yRNUTqQ
+
+//CODE
+#include <iostream>
+#include <string.h>
+#include <map>
+
+using namespace std;
+
+int main() {
+	map <int, string> Employee;
+	Employee[101] = "Rahul";
+	Employee[102] = "Pulkit";
+	Employee[103] = "sohan";
+	Employee[104] = "raj";
+	Employee[105] = "titu";
+	
+	cout<<"Employee[104]: "<<Employee[104]<<endl;
+	cout<<"Map size: "<<Employee.size()<<endl;
+	cout<<"Printing the key and value of map: "<<endl;
+	// first create the iterator
+	map<int, string> :: iterator iter;
+	for(iter=Employee.begin(); iter!= Employee.end(); iter++) {
+	    cout<<(*iter).first<<" "<<(*iter).second<<endl;
+	}
+	
+	cout<<"\nPrinting map in reverse order: "<<endl;
+	map<int, string> :: reverse_iterator itr;
+
+	for(itr=Employee.rbegin(); itr!=Employee.rend(); itr++) {
+	    cout<<(*itr).first<<" "<<(*itr).second<<endl;
+	}
+	
+	// Clear function -> to clear all the map element
+	Employee.clear();
+	cout<<"\nsize after clearning the map: "<<Employee.size()<<endl;
+
+    // emplace function -> to insert the elements in map
+    Employee.emplace(101,"Rahul");
+    Employee.emplace(102,"Navneet");
+    Employee.emplace(103,"sayog");
+    cout<<"\nAfter emplacing: "<<endl;
+    for(iter=Employee.begin(); iter!= Employee.end(); iter++) {
+        cout<<iter ->first<<" "<<iter ->second<<endl;
+    }
+    cout<<"size after inserting elements: "<<Employee.size()<<endl;
+	
+	// erase function() -> used to remove a singe element at specific position
+	// find function() -> find an element
+	iter = Employee.find(102);
+	cout<<"\nafter erasing: "<<endl;
+	Employee.erase(iter);
+	for(iter=Employee.begin(); iter!= Employee.end(); iter++) {
+        cout<<iter ->first<<" "<<iter ->second<<endl;
+    }
+	cout<<"size of map: "<<Employee.size()<<endl;
+	
+	return 0;
+}
