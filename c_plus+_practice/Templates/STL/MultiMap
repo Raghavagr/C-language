@@ -1,0 +1,115 @@
+// C++ STL MULTIMAP
+
+Multimaps are part of the C++ STL (Standard Template Library). Multimaps are the associative containers like map that stores sorted key-value pair,
+  but unlike maps which store only unique keys, multimap can have duplicate keys. 
+By default it uses < operator to compare the keys.
+
+// URL: https://ide.geeksforgeeks.org/5fHk2m55V7
+
+//CODE
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+
+int main() {
+	multimap <string, int> myMap = {
+	    {"Ram",91},
+	    {"rahul",87},
+	    {"navneet",91},
+	    {"Ram",91}
+	};
+	
+	//myMap["navneet"] = 96;
+	cout<<"size of map: "<<myMap.size()<<endl;
+	
+	// create a iterator of multimap to display elements
+	multimap <string, int> :: iterator iter;
+	cout<<"displaying elements"<<endl;
+	for(iter = myMap.begin(); iter!= myMap.end(); iter++) {
+	    cout<<iter->first<<" "<<iter->second<<endl;
+	}
+	
+	// create the reverse iterator
+	multimap <string, int> :: reverse_iterator it;
+	// rbegin() and rend()  to display in reverse order
+	cout<<"\ndisplaying elements in reverse order"<<endl;
+	for(it = myMap.rbegin(); it!= myMap.rend(); it++) {
+	    cout<<it->first<<" "<<it->second<<endl;
+	}
+	
+	// empty() -> to check if multimap is empty or not.
+	// it return 0 for FALSE(not empty) and 1 for TRUE(empty)
+	cout<<"\n is empty: "<<myMap.empty()<<endl;
+	
+	return 0;
+}
+
+
+// OPERATORS
+// ==, !=, <, >, <=, >= 
+
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+int main() {
+	multimap <char, int> m1;
+	multimap <char, int> m2;
+	
+	if(m1 == m2) {
+	    cout<<"m1 equal to m2"<<endl;
+	}
+	else {
+	    cout<<"not equal"<<endl;
+	}
+	
+	// emplace -> to insert in between
+	m1.emplace('r',77);
+	
+	if(!(m1 == m2)) {
+	    cout<<"m1 not equal to m2"<<endl;
+	}
+	return 0;
+}
+
+// PAIR:
+he pair container is a simple container defined in <utility> header consisting of two data elements or objects. 
+
+ - The first element is referenced as ‘first’ and the second element as ‘second’ and the order is fixed (first, second).
+ - Pair is used to combine together two values which may be different in type. Pair provides a way to store two heterogeneous objects as a single unit.
+ - Pair can be assigned, copied and compared. The array of objects allocated in a map or hash_map are of type ‘pair’ by default in which all the ‘first’ elements are unique keys associated with their ‘second’ value objects.
+ - To access the elements, we use variable name followed by dot operator followed by the keyword first or second.
+
+// URL: https://ide.geeksforgeeks.org/v29ciHAfrc
+
+#include <map>    
+#include <iostream>    
+    
+int main ()    
+{    
+   using namespace std;    
+   multimap <int, int> m1, m2, m3;    
+   int i;    
+   typedef pair <int, int> Int_Pair;    
+    
+   for (i = 0; i <3; i ++)    
+   {    
+      m1.insert (Int_Pair (i, i));    
+      m2.insert (Int_Pair (i, i * i));    
+      m3.insert (Int_Pair (i, i));    
+   }    
+    
+   if (m1 == m2)    
+      cout << "The multimaps m1 and m2 are equal." << endl;    
+   else    
+      cout << "The multimaps m1 and m2 are not equal." << endl;    
+    
+   if (m1 == m3)    
+      cout << "The multimaps m1 and m3 are equal." << endl;    
+   else    
+      cout << "The multimaps m1 and m3 are not equal." << endl;    
+      return 0;  
+}    
