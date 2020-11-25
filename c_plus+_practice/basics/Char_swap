@@ -63,3 +63,36 @@ int main() {
 	cout<<test("a")<<endl;
 	cout<<test("JS")<<endl;
 }
+
+// 			SAME TYPE OF QUESTION WITH CHANGE IN TASTE
+
+// QUE) Write a C++ program to create a new string with the last char added at the front and back of a given string of length 1 or more.
+
+// URL: https://ide.geeksforgeeks.org/y5OKNau2W6
+
+#include <iostream>
+using namespace std;
+
+// logic-1
+/*
+string test(string str) {
+    string s;
+    s = str.substr(str.length()-1);
+    return s + str + s;
+}
+*/
+
+//logic-2
+string test(string str) {
+    char s = str[str.length()-1];
+    return s + str + s;
+}
+
+int main() {
+    
+	cout<<test("Red")<<endl;
+	cout<<test("Green")<<endl;
+	cout<<test("1")<<endl;
+	//cout<<s.substr(s.length()-1);
+}
+
