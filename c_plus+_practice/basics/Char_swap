@@ -35,3 +35,31 @@ int main() {
 	cout<<test("a")<<endl;
 	cout<<test("python")<<endl;
 }
+
+
+// 			SAME QUESTION WITH SOME OTHER TASTE
+
+// QUE) Write a C++ program to create a new string which is 4 copies of the 2 front characters of a given string. If the given string length is less than 2 return the original string.
+
+// URL:	 https://ide.geeksforgeeks.org/EQPe6ZDrbs
+
+#include <iostream>
+using namespace std;
+
+
+
+string test(string str) {
+    if(str.length() > 1) {
+        return str.substr(0,2) + str.substr(0,2) + str.substr(0,2) + str.substr(0,2);
+    }
+    else {
+        return str;
+    }
+}
+
+
+int main() {
+	cout<<test("C Sharp")<<endl;
+	cout<<test("a")<<endl;
+	cout<<test("JS")<<endl;
+}
