@@ -1,0 +1,37 @@
+// que)  Write a C++ program to check if a string 'yt' appears at index 1 in a given string. If it appears return a string without 'yt' otherwise return the original string.
+Sample Input:
+"Python"
+"ytade"
+"jsues"
+Sample Output:
+Phon
+ytade
+jsues
+
+// url: https://ide.geeksforgeeks.org/5ePq3M73Pb
+
+//CODE:
+#include <iostream>
+using namespace std;
+
+string test(string str) {
+    if(str.substr(1,2) == "yt") {
+        return str[0] + str.substr(3,str.length()-1);
+    }
+    else {
+        return str;
+    }
+}
+
+
+int main() {
+    //string str="python";
+	//cout<<str.substr(1,2)<<endl;
+	
+	cout<<test("python")<<endl;
+	cout<<test("ytade")<<endl;
+	cout<<test("mythy")<<endl;
+	cout<<test("jsues")<<endl;
+	
+	return 0;
+}
