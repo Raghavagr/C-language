@@ -70,3 +70,27 @@ int main() {
 }
 
 	
+	
+**		PROGRAM NO. -- 3 	**
+// QUE)	Write a C++ program to count the string "aa" in a given string and assume "aaa" contains two "aa".
+
+// CODE:
+#include <iostream>
+using namespace std;
+
+int test(string str) {
+    int cnt_aa = 0;
+    for(int i=0; i<str.length()-1; i++) {
+        if(str.substr(i,2) == "aa") {
+            cnt_aa++;
+        }
+    }
+    return cnt_aa;
+}
+
+int main() {
+	cout<<test("mykaaa")<<endl;
+	cout<<test("jjkiaaasew")<<endl;
+	cout<<test("JSaaakoiaa")<<endl;
+	return 0;
+}
