@@ -1,0 +1,22 @@
+//  C++ Program to Remove Characters in String Except Alphabets
+
+// url: https://ide.geeksforgeeks.org/OWqrJqgwJM
+
+//code: 
+#include <iostream>
+using namespace std;
+
+int main() {
+    string str;
+    int len;
+	cout<<"enter any string: "<<endl;
+	cin>>str;
+	len = str.size();
+	for(int i=0; i<len; i++) {
+	    if(!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))) {
+	        str[i] = '\0';
+	    }
+	}
+	cout<<"after removing the string is: "<<str<<endl;
+	return 0;
+}
