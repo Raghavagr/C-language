@@ -1,0 +1,18 @@
+// QUE) Write a C++ program to insert a given string into middle of the another given string of length 4. 
+
+// URL: https://ide.geeksforgeeks.org/cJoCwv4pPk
+
+//CODE:
+#include <iostream>
+using namespace std;
+
+string test(string s1, string s2) {
+    int len = s1.length();
+    int mid = len/2;
+    return s1.substr(0,mid) + s2 + s1.substr(mid,len);
+}
+
+int main() {
+	cout<<test("[[]]","hello")<<endl;
+	return 0;
+}
