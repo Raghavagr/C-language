@@ -1,0 +1,29 @@
+// QUE) Write a C++ program to compute the sum of two given non-negative integers x and y as long as the sum has the same number of digits as x. 
+        If the sum has more digits than x then return x without y.
+        
+ // URL:  https://ide.geeksforgeeks.org/cBiGIyqBsW
+ 
+ //CODE:
+ #include <iostream>
+#include <string>
+
+using namespace std;
+
+int test(int a, int b) {
+    int len = to_string(a).length();
+    int sum = a+b;
+    if(to_string(sum).length() > len) {
+        return a;
+    }
+    else {
+        return sum;
+    }
+}
+
+int main() {
+	cout<<test(4,5)<<endl;
+	cout<<test(7,10)<<endl;
+	cout<<test(10,10)<<endl;
+	return 0;
+}
+     
