@@ -1,0 +1,35 @@
+// QUE) Move the first two characters to the end of a given string of length at least two
+
+// URL: https://ide.geeksforgeeks.org/ruKrMijSeE
+
+// CODE:
+#include <iostream>
+#include <string>
+
+using namespace std;
+// logic-1
+/*
+string test(string str) {
+    if(str.length() > 2) {
+        string s = str.substr(0,2);
+        return str.substr(2,str.length()-1) + s;
+    }
+    else {
+        return str;
+    }
+}
+*/
+
+// logic-2
+string test(string str) {
+    string s1 = str;
+    return str.erase(0,2) + s1.substr(0,2);
+}
+
+int main() {
+    
+	cout<<test("hello")<<endl;
+	cout<<test("js")<<endl;
+	//cout<<test("python")<<endl;
+	//cout<<test(17,33)<<endl;
+}
