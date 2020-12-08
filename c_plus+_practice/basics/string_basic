@@ -168,3 +168,7 @@ int main() {
 }
 
 
+
+// QUE)	Write a C++ program to create a new string using the first and last n characters from a given string of length at least n
+// URL:	https://ide.geeksforgeeks.org/rw3gwhNYIG
+
