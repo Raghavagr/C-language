@@ -1,0 +1,29 @@
+// C++ Program for finding Perfect Number
+
+// URL: https://ide.geeksforgeeks.org/Vpc4PJz0dY
+
+#include <iostream>
+using namespace std;
+
+int isPerfect(int no) {
+    int i=0, sum=0;
+    while(i++ < no) {
+        if(no%i == 0 && i < no) {
+            sum = sum+i;
+        }
+    }
+    return sum == no;
+}
+
+int main() {
+	int first,last;
+	cout<<"enter the first and last num in range"<<endl;
+	cin>>first>>last;
+	for(int i=first; i<= last; i++) {
+	    if(isPerfect(i)) {
+	        cout<<i<<endl;
+	    }
+	}
+	
+	return 0;
+}
