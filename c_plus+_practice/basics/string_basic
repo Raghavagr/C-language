@@ -172,3 +172,16 @@ int main() {
 // QUE)	Write a C++ program to create a new string using the first and last n characters from a given string of length at least n
 // URL:	https://ide.geeksforgeeks.org/rw3gwhNYIG
 
+// QUE) Write a C++ program to create a new string of length 2 starting at the given index of a given string. Go to the editor
+Sample Input:
+"Hello", 1
+"Python", 2
+"on", 1
+Sample Output:
+el
+th
+on
+
+// URL:	https://ide.geeksforgeeks.org/x2TJnCvZ3m
+
+
