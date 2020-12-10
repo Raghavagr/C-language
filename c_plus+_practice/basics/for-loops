@@ -16,3 +16,14 @@ SOL:- URL:  https://ide.geeksforgeeks.org/fgnHTSbsvp
 // 6) GCD OF 2 NO.
 SOL:  URL:  https://ide.geeksforgeeks.org/xtHpAh27eQ
 
+// 7)  Write a program in C++ to find the sum of the series 1 + 1/2^2 + 1/3^3 + ..+ 1/n^n
+SOL:  URL:  https://ide.geeksforgeeks.org/fSWOx78YYb
+
+// 8) Write a program in C++ to calculate the sum of the series (1*1) + (2*2) + (3*3) + (4*4) + (5*5) + ... + (n*n).
+SOL:  URL:  https://ide.geeksforgeeks.org/h0JLeep6iE
+
+// 9)  Write a program in C++ to calculate the series (1) + (1+2) + (1+2+3) + (1+2+3+4) + ... + (1+2+3+4+...+n).
+SOL:  URL:  https://ide.geeksforgeeks.org/HhFv895MOl
+
+// 10)  Write a program in C++ to asked user to input positive integers to process count, maximum, minimum, and average or terminate the process with -1
+SOL:  URL:  https://ide.geeksforgeeks.org/aq0tGtBvja
