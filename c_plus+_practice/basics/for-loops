@@ -193,3 +193,24 @@ enter no. of rows
 
 // SOL: URL:    https://ide.geeksforgeeks.org/FLgfF9s9Dw
 
+// 43)
+enter n
+        A 
+      A B C 
+    A B C D C 
+  A B C D E D C 
+A B C D E F E D C 
+
+// SOL: URL:    https://ide.geeksforgeeks.org/oZB1JceDnS
+
+// 44)
+enter n
+    1
+   232
+  34543
+ 4567654
+567898765
+
+// SOL: URL:    https://ide.geeksforgeeks.org/cQ27ZCjYy1
+
+
