@@ -274,5 +274,27 @@ rnter rows
 // 53)  Write a program in C++ to input any number and print it in words.
 // SOL: URL:    https://ide.geeksforgeeks.org/W3zFtWGW2P
 
+// 54)  Write a program in C++ to print all ASCII character with their values.
+// SOL: URL:    https://ide.geeksforgeeks.org/pETlCAMHsz
 
+// 55)  Write a program in C++ to find power of any number using for loop.
+// SOL: URL:    https://ide.geeksforgeeks.org/inqCFYe4o7
+
+// 56) FInd ALL THE FACTORS OF A NUMBER
+// sol: URL:    https://ide.geeksforgeeks.org/flZGL7KQAp        
+
+// 57) ONE VERY INTERESTING PROBLEM   --> Print this pattern
+    // Take one input from user and print this patter
+    // int n = 5
+    // otuput:
+        black-white-black-white-black
+        white-black-white-black-white
+        black-white-black-white-black
+        white-black-white-black-white
+        black-white-black-white-black
+
+// SOL: URL:    https://ide.geeksforgeeks.org/MFPkXRfolY
+
+// 58)  Write a program in C++ to calculate the sum of the series 1·2+2·3+3·4+4.5+5.6+.......
+// SOL: URL:    https://ide.geeksforgeeks.org/zokQ5hVpwm
 
