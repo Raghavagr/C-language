@@ -298,3 +298,17 @@ rnter rows
 // 58)  Write a program in C++ to calculate the sum of the series 1·2+2·3+3·4+4.5+5.6+.......
 // SOL: URL:    https://ide.geeksforgeeks.org/zokQ5hVpwm
 
+// 59) Write a program in C++ to produce a square matrix with 0's down the main diagonal, 1's in the entries just above and below the main diagonal, 
+        2's above and below that, etc. 
+n = 5
+0 1 2 3 4
+1 0 1 2 3
+2 1 0 1 2
+3 2 1 0 1
+4 3 2 1 0
+
+// SOL: //URL:  https://ide.geeksforgeeks.org/uwp3TZmvcQ
+
+// 60)  Write a program in C++ to convert a decimal number to binary number
+// SOL: URL:    https://ide.geeksforgeeks.org/AgWsNcvWrP
+
