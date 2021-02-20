@@ -1,0 +1,19 @@
+1) Write a C++ program to check whether a given number is a power of two or not.
+
+// SOL: URL:  https://ide.geeksforgeeks.org/vIuQT3UZj5
+
+2) Write a C++ program to reverse the digits of a given integer. (REVERSE)
+
+// SOL: URL:  https://ide.geeksforgeeks.org/GBgTJUcx4M
+
+3) Write a C++ program to divide two integers (dividend and divisor) without using multiplication, division and mod operator.
+  --> left shift operator(<<) -> eg: a<<b -> (a * 2^b)
+  --> right shift operator(>>) -> eg: a>>b -> (a / 2^b)
+
+// sol: url:  https://ide.geeksforgeeks.org/KAhNMjVQ7I
+
+4) Write a C++ program to calculate x raised to the power n (xn).
+
+// sol: URL:  https://ide.geeksforgeeks.org/S0ILI112oG
+
+// 
