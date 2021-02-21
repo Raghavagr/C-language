@@ -16,4 +16,19 @@
 
 // sol: URL:  https://ide.geeksforgeeks.org/S0ILI112oG
 
-// 
+5) Write a C++ program to get the Excel column title that corresponds to a given column number (integer value). 
+      For example:
+      1 -> A
+      2 -> B
+      3 -> C
+// SOL: URL:  https://ide.geeksforgeeks.org/kmLMVvrpyF
+
+6) Write a C++ program to find the number of trailing zeroes in a given factorial.(Trailing Zeroes)
+
+// SOL: URL:  https://ide.geeksforgeeks.org/Thzym9O4Hf
+
+7) Write a C++ program to count the total number of digit 1 appearing in all positive integers less than or equal to a given integer n
+
+// SOL: URL:  https://ide.geeksforgeeks.org/6O63IHCoNy
+
+
