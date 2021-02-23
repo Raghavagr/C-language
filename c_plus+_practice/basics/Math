@@ -31,4 +31,16 @@
 
 // SOL: URL:  https://ide.geeksforgeeks.org/6O63IHCoNy
 
-
+8) Write a C++ programming to add repeatedly all digits of a given non-negative number until the result has only one digit.
+    Example:
+    Sample Input: 58
+    Sample Output: 4
+    Explanation: The formula is like: 5 + 8 = 13, 1 + 3 = 4.
+ 
+ // URL:  SOL:  https://ide.geeksforgeeks.org/fPb6Nq2QQd
+ 
+ 9) Convert Decimal to binary. OR -> Print the binary equivalent of a number
+ 
+ // SOL:  URL:  https://ide.geeksforgeeks.org/5EkGY7uG0L
+ 
+ 
