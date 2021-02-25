@@ -43,10 +43,29 @@
  
  // SOL:  URL:  https://ide.geeksforgeeks.org/5EkGY7uG0L
  
- 10) Find the square root of a number using Babylonian method
+ 10) Write a C++ programming to get the maximum product from a given integer after breaking the integer into the sum of at least two positive integers
  
  // SOL:  URL:  https://ide.geeksforgeeks.org/keVn4mEKFS
  
 11) Find the square root of a number using Babylonian method
 
 // SOL: URL:  https://ide.geeksforgeeks.org/2dvU46MNgE
+
+12) Write a C++ program to multiply two integers without using multiplication, division, bitwise operators, and loops.
+
+// SOL: URL:  https://ide.geeksforgeeks.org/AlARWMN2DS
+
+13) Write a C++ program to calculate the product of two positive integers represented as strings. Return the result as a string. 
+
+// SOL: URL:  https://ide.geeksforgeeks.org/khFg307d81
+
+14) Write a C++ program to compute the sum of two given binary strings. Return result will be a binary string and input strings should not be blank and contains only 1 or 0 charcters.
+        Sample Input: bstr1 = "1100"
+        bstr2 = "1010"
+        Sample Output: 1100 + 1010 = 10110
+        
+SOL:  URL:  https://ide.geeksforgeeks.org/fatK6PPrXW
+
+15) Write a C++ program to check whether a given positive integer is a perfect square or not. 
+
+SOL:  URL:  https://ide.geeksforgeeks.org/PghpDWK9NR
