@@ -1,0 +1,30 @@
+1) Write a program in C++ to check whether a given number is an ugly number or not (Ugly Number)
+  -> # EXPLANATION: Ugly numbers are those number whose prime factors are 2, 3 or 5. From 1 to 15, there are 11 ugly numbers 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15. 
+                    The numbers 7, 11, 13 are not ugly because they are prime. The number 14 is not ugly because in its prime factor the 7 will come.
+                    
+// SOL: URL:  https://ide.geeksforgeeks.org/X70Y1ZrlXI
+
+2) Write a program in C++ to check whether a given number is Abundant or not.
+  -> # EXPLANATION: an abundant number or excessive number is a number that is smaller than the sum of its proper divisors. The integer 12 is the first abundant
+  
+// SOL: URL:  https://ide.geeksforgeeks.org/fuAi72SpJI  
+  
+3)  Write a program in C++ to find the Abundant numbers (integers) between 1 to 1000. 
+
+// SOL: URL:  https://ide.geeksforgeeks.org/NQfBEa7Ihs
+
+4) Write a program in C++ to check whether a given number is Deficient or not. 
+  -> # EXPLANATION: a deficient number or defective number is a number n for which the sum of divisors of ''n'' is less than 2n.
+                    Equivalently, it is a number for which the sum of proper divisors (or aliquot sum) is less than n.
+
+// SOL: URL:  https://ide.geeksforgeeks.org/9M7A6J5DK8
+
+5) Write a program in C++ to check whether a given number is Perfect or not.
+  -> # EXPLANATION: Perfect number, a positive integer that is equal to the sum of its proper divisors. 
+  
+// SOL: URL:  https://ide.geeksforgeeks.org/YQHNEqTNYd
+
+6)  Write a program in C++ to generate random integers in a specific range.
+
+// SOL: https://ide.geeksforgeeks.org/bud4NrIZno
+
