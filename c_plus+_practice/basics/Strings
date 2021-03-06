@@ -1,0 +1,15 @@
+/*    ALL THE BASIC PROGRAMS OF STRING THAT ARE MOSTLY ASKED */
+
+1) Write a C++ program to reverse a given string. 
+
+// SOL: URL:  https://ide.geeksforgeeks.org/QajsOfCzHE
+
+2) Write a C++ program to change every letter in a given string with the letter following it in the alphabet (ie. a becomes b, p becomes q, z becomes a).
+
+// SOL: URL:  https://ide.geeksforgeeks.org/FtncYgLUqP
+
+3) Write a C++ program to capitalize the first letter of each word of a given string. Words must be separated by only one space
+
+// SOL: URL:  https://ide.geeksforgeeks.org/MrdNUwSvJa
+
+4)  
